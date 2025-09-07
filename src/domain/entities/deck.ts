@@ -10,10 +10,7 @@ export class Deck {
     this._audioContext = audioContext;
     this._destination = destination;
 
-    this._songLoader = new SongLoader(
-      audioContext,
-      this._destination,
-    );
+    this._songLoader = new SongLoader(audioContext, this._destination);
 
     this._audioContext;
   }

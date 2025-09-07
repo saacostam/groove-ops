@@ -1,7 +1,7 @@
 import { Controller } from "../../domain/entities";
 import type { LoadSongToDeckRequest } from "../dto";
 import type { IAlertProvider } from "../provider";
-import type { ILibraryRepository } from "../repository"
+import type { ILibraryRepository } from "../repository";
 
 const webAudioCtx = new AudioContext();
 const controller = new Controller(webAudioCtx);
@@ -12,23 +12,20 @@ export class ControllerUseCases {
 
   constructor(args: {
     alertProvider: IAlertProvider;
-    libraryRepository: ILibraryRepository,
+    libraryRepository: ILibraryRepository;
   }) {
     this.alertProvider = args.alertProvider;
     this.libraryRespository = args.libraryRepository;
   }
 
-  async loadSongToDeck({
-    songId,
-    deckNumber,
-  }: LoadSongToDeckRequest) {
+  async loadSongToDeck({ songId, deckNumber }: LoadSongToDeckRequest) {
     const song = this.libraryRespository.getSongById(songId);
 
     if (!song) {
       this.alertProvider.send({
         msg: "Song not found",
         type: "error",
-      })
+      });
       return;
     }
 

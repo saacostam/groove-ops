@@ -12,13 +12,13 @@ const alertProvider = new AlertProvider();
 const deckUseCases = new ControllerUseCases({
   libraryRepository,
   alertProvider,
-})
+});
 
 const libraryUseCases = new LibraryUseCases({
   libraryRepository,
-})
+});
 
 export const Container = {
   deckUseCases,
   libraryUseCases,
-}
+};
