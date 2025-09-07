@@ -1,6 +1,7 @@
 export interface GetLibraryResponse {
   songs: {
-			name: string;
-			audioFile: string;
-		}[]
+    id: string;
+		name: string;
+		audioFile: string;
+	}[]
 }

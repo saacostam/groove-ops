@@ -39,10 +39,28 @@ export class LibraryView {
     span.textContent = song.name;
     root.appendChild(span);
 
-    const button = document.createElement("button");
-    button.textContent = "Play";
-    button.onclick = () => console.log("Play");
-    root.appendChild(button);
+    // Button Container
+    const buttonContainer = document.createElement("div");
+    buttonContainer.classList.add("flex", "flex-row", "gap");
+
+    const deck1 = document.createElement("button");
+    deck1.textContent = "Deck 1";
+    deck1.onclick = () => Container.deckUseCases.loadSongToDeck({
+      songId: song.id,
+      deckNumber: 1,
+    });
+    buttonContainer.appendChild(deck1);
+
+    const deck2 = document.createElement("button");
+    deck2.textContent = "Deck 2";
+    deck2.onclick = () => Container.deckUseCases.loadSongToDeck({
+      songId: song.id,
+      deckNumber: 1,
+    });
+    buttonContainer.appendChild(deck2);
+
+    root.appendChild(buttonContainer);
+    // End of Button Container
 
     return root;
   }

@@ -1,17 +1,25 @@
 import type { ILibraryRepository } from "../../app/repository";
 import { Song } from "../../domain";
 
+const SONGS: Song[]= [
+  new Song({
+    audioFile: "/song.mp3",
+    id: "1",
+    name: "Song1",
+  }),
+  new Song({
+    audioFile: "/song.mp3",
+    id: "2",
+    name: "Song2",
+  })
+];
+
 export class LibraryRepository implements ILibraryRepository {
   getAllSongs(): Song[] {
-    return [
-      new Song({
-        name: "Song1",
-        audioFile: "/song.mp3",
-      }),
-      new Song({
-        name: "Song2",
-        audioFile: "/song.mp3",
-      })
-    ]
+    return [...SONGS]
+  }
+
+  getSongById(id: Song["id"]): Song | undefined {
+    return SONGS.find(s => s.id === id);
   }
 }

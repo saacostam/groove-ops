@@ -18,8 +18,8 @@ export class Deck {
     this._audioContext;
   }
 
-  public setSong(song: Song) {
-    this._songLoader.setSong(song);
+  public async setSong(song: Song) {
+    return this._songLoader.setSong(song);
   }
 
   public get isUsable() {

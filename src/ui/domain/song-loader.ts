@@ -18,9 +18,9 @@ export class SongLoader {
     this._destination = destination;
   }
 
-  public setSong(song: Song): void {
+  public async setSong(song: Song): Promise<void> {
     this._current = song;
-    this._loadSong(song);
+    return this._loadSong(song);
   }
 
   private async _loadSong(song: Song): Promise<void> {
