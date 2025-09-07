@@ -1,4 +1,4 @@
-import { Controller } from "../../domain";
+import { Controller } from "../../domain/entities";
 import type { LoadSongToDeckRequest } from "../dto";
 import type { IAlertProvider } from "../provider";
 import type { ILibraryRepository } from "../repository"

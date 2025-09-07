@@ -1,5 +1,5 @@
 import type { ILibraryRepository } from "../../app/repository";
-import { Song } from "../../domain";
+import { Song } from "../../domain/entities";
 
 const SONGS: Song[]= [
   new Song({
