@@ -4,11 +4,85 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #eee;
+  background-color: #222222;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap {
+    gap: .5rem;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.bg-base, .base-base-1 {
+    background-color: #222222;
+}
+
+.bg-base-2 {
+    background-color: #323232;
+}
+
+.bg-base-3 {
+    background-color: #424242;
+}
+
+.content-base {
+    color: #eee;
+}
+
+.rounded {
+    border-radius: .5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-accent {
+    color: orange;
+}
+
+.bg-accent {
+    background-color: orange;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    background-color: orange;
+    border: none;
+    border-radius: .5rem;
+    color: #222222;
+}
+
+button:hover {
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
 }

@@ -14,6 +14,8 @@ export class Deck {
       audioContext,
       this._destination,
     );
+
+    this._audioContext;
   }
 
   public setSong(song: Song) {
