@@ -10,8 +10,12 @@
     "lint": "prettier --write ./"
   },
   "devDependencies": {
+    "@types/toastify-js": "^1.12.4",
     "prettier": "^3.6.2",
     "typescript": "~5.8.3",
     "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0"
   }
 }
