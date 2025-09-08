@@ -33,7 +33,7 @@ export class LibraryView {
     }
     newRoot.appendChild(songsList);
 
-    this.root.replaceWith(newRoot);
+    this.root.firstChild?.replaceWith(newRoot);
   }
 
   _getSongView(
@@ -73,7 +73,7 @@ export class LibraryView {
     deck2.onclick = () =>
       Container.deckUseCases.loadSongToDeck({
         songId: song.id,
-        deckNumber: 1,
+        deckNumber: 2,
       });
     buttonContainer.appendChild(deck2);
 

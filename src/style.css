@@ -18,7 +18,7 @@
 }
 
 .gap {
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .flex-col {
@@ -68,6 +68,10 @@
 
 .bg-accent {
   background-color: orange;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 button {
