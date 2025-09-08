@@ -38,4 +38,8 @@ export class Deck {
   public nudge(percentage: number) {
     this._songLoader.nudge(percentage);
   }
+
+  get currentSong() {
+    return this._songLoader.current;
+  }
 }

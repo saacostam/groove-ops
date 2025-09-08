@@ -30,6 +30,17 @@ export class ControllerUseCases {
     }
 
     const deck = deckNumber === 1 ? controller.deckOne : controller.deckTwo;
+
+    if (deck.currentSong && deck.currentSong.id === song.id) {
+      this.alertProvider.send({
+        msg: `Song ${song.name} is already loaded on deck ${deckNumber}`,
+        type: "warning",
+      });
+      return;
+    }
+
+    deck.pause();
+    deck.jumpTo(0);
     await deck.setSong(song);
     deck.play();
   }
